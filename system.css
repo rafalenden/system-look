@@ -86,10 +86,6 @@ input, textarea, select {
   font-size: var(--font-size-base);
 }
 
-input[type="file"] {
-  overflow: hidden;
-}
-
 input[type="file"]:not(:disabled):not([readonly]) {
   cursor: pointer;
 }
@@ -184,4 +180,27 @@ th, td {
 
 summary {
     cursor: pointer;
+}
+
+abbr {
+  text-decoration: underline dotted;
+  cursor: help;
+}
+
+samp, var {
+  font-family: var(--system-ui-mono);
+}
+
+progress, meter {
+  width: 100%;
+  height: 1rem;
+}
+
+caption {
+  padding: var(--spacing-sm) 0;
+  text-align: left;
+}
+
+tfoot td, tfoot th {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
