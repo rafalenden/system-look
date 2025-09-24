@@ -2,21 +2,12 @@
 
 A lightweight CSS library that provides beautiful defaults for native HTML elements without requiring any classes. Just include the CSS file and your semantic HTML will look great out of the box.
 
-## Features
-
-- **Classless**: Works with pure semantic HTML - no classes needed
-- **Responsive**: Designed to work on all screen sizes
-- **Dark mode**: Automatic dark/light theme switching based on system preference
-- **Modern**: Uses CSS custom properties and modern CSS features
-- **Lightweight**: Small footprint with no dependencies
-- **Accessible**: Built with accessibility best practices
-
 ## Installation
 
 ### CDN
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/system-styles@latest/native.css">
+<link rel="stylesheet" href="https://unpkg.com/system-styles@latest/system.css">
 ```
 
 ### NPM
@@ -28,15 +19,15 @@ npm install system-styles
 Then include in your HTML:
 
 ```html
-<link rel="stylesheet" href="node_modules/system-styles/native.css">
+<link rel="stylesheet" href="node_modules/system-styles/system.css">
 ```
 
 ### Download
 
-Download `native.css` and include it in your project:
+Download `system.css` and include it in your project:
 
 ```html
-<link rel="stylesheet" href="path/to/native.css">
+<link rel="stylesheet" href="path/to/system.css">
 ```
 
 ## Usage
@@ -81,67 +72,19 @@ Just write semantic HTML and it will be styled automatically:
 </html>
 ```
 
-## Styled Elements
-
-Native CSS provides beautiful defaults for:
-
-### Typography
-- Headings (`h1` - `h6`)
-- Paragraphs (`p`)
-- Links (`a`)
-- Text formatting (`strong`, `em`, `mark`, `small`)
-- Code (`code`, `pre`, `kbd`)
-- Quotes (`blockquote`)
-
-### Forms
-- Text inputs (`input[type="text"]`, `input[type="email"]`, etc.)
-- Textareas (`textarea`)
-- Buttons (`button`)
-- Select dropdowns (`select`)
-- Checkboxes and radio buttons
-- Form structure (`fieldset`, `legend`, `label`)
-
-### Structure
-- Lists (`ul`, `ol`, `dl`)
-- Tables (`table`, `th`, `td`)
-- Horizontal rules (`hr`)
-- Images (`img`)
-- Figures (`figure`, `figcaption`)
-
-### Utility Classes
-
-While System Styles works without classes, a few optional utility classes are provided:
-
-- `.text-center`, `.text-left`, `.text-right` - Text alignment
-- `.mt-0` to `.mt-4`, `.mb-0` to `.mb-4` - Margin utilities
-- `.sr-only` - Screen reader only content
-
 ## Dark Mode
 
 System Styles automatically adapts to your system's dark/light mode preference using `prefers-color-scheme`. No configuration needed!
 
-## Browser Support
-
-System Styles works in all modern browsers that support:
-- CSS Custom Properties (CSS Variables)
-- `prefers-color-scheme` media query
-
-This includes:
-- Chrome 49+
-- Firefox 31+
-- Safari 9.1+
-- Edge 16+
-
 ## Customization
 
-You can customize System Styles by overriding the CSS custom properties:
+You can customize System Styles by overriding CSS custom properties:
 
 ```css
 :root {
-  --text-color: #333;
-  --bg-color: #fff;
-  --link-color: #007bff;
-  --border-color: #ddd;
+  --font-size-base: 1rem;
+  --spacing-md: 1rem;
+  --system-ui: system-ui, sans-serif;
   /* ... and many more */
 }
 ```
