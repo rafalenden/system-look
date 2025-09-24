@@ -3,22 +3,22 @@
   "version": "1.0.0",
   "description": "A CSS library that provides reasonable defaults for native HTML elements without requiring classes",
   "main": "system.css",
-  "style": "native.css",
   "files": [
     "system.css",
     "README.md"
   ],
   "keywords": [
     "css",
+    "styles",
     "framework",
     "native",
     "html",
     "classless",
     "semantic",
     "responsive",
-    "dark-mode"
+    "system"
   ],
-  "author": "Your Name",
+  "author": "Rafal Enden",
   "license": "MIT",
   "repository": {
     "type": "git",
