@@ -1,4 +1,4 @@
-# System CSS
+# System Styles
 
 A lightweight CSS library that provides beautiful defaults for native HTML elements without requiring any classes. Just include the CSS file and your semantic HTML will look great out of the box.
 
@@ -16,19 +16,19 @@ A lightweight CSS library that provides beautiful defaults for native HTML eleme
 ### CDN
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/system-css@latest/native.css">
+<link rel="stylesheet" href="https://unpkg.com/system-styles@latest/native.css">
 ```
 
 ### NPM
 
 ```bash
-npm install system-css
+npm install system-styles
 ```
 
 Then include in your HTML:
 
 ```html
-<link rel="stylesheet" href="node_modules/system-css/native.css">
+<link rel="stylesheet" href="node_modules/system-styles/native.css">
 ```
 
 ### Download
@@ -110,7 +110,7 @@ Native CSS provides beautiful defaults for:
 
 ### Utility Classes
 
-While Native CSS works without classes, a few optional utility classes are provided:
+While System Styles works without classes, a few optional utility classes are provided:
 
 - `.text-center`, `.text-left`, `.text-right` - Text alignment
 - `.mt-0` to `.mt-4`, `.mb-0` to `.mb-4` - Margin utilities
@@ -118,11 +118,11 @@ While Native CSS works without classes, a few optional utility classes are provi
 
 ## Dark Mode
 
-System CSS automatically adapts to your system's dark/light mode preference using `prefers-color-scheme`. No configuration needed!
+System Styles automatically adapts to your system's dark/light mode preference using `prefers-color-scheme`. No configuration needed!
 
 ## Browser Support
 
-System CSS works in all modern browsers that support:
+System Styles works in all modern browsers that support:
 - CSS Custom Properties (CSS Variables)
 - `prefers-color-scheme` media query
 
@@ -134,7 +134,7 @@ This includes:
 
 ## Customization
 
-You can customize System CSS by overriding the CSS custom properties:
+You can customize System Styles by overriding the CSS custom properties:
 
 ```css
 :root {

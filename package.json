@@ -1,5 +1,5 @@
 {
-  "name": "system-css",
+  "name": "system-styles",
   "version": "1.0.0",
   "description": "A CSS library that provides reasonable defaults for native HTML elements without requiring classes",
   "main": "system.css",
@@ -22,10 +22,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/system-css.git"
+    "url": "https://github.com/yourusername/system-styles.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/system-css/issues"
+    "url": "https://github.com/yourusername/system-styles/issues"
   },
-  "homepage": "https://github.com/yourusername/system-css#readme"
+  "homepage": "https://github.com/yourusername/system-styles#readme"
 }
