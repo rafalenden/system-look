@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System CSS Demo</title>
+    <link rel="stylesheet" href="system.css">
+    <style>
+        body {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .demo-section {
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .demo-section:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>System CSS Demo</h1>
+    <p>This page demonstrates all HTML elements styled with System CSS. No classes are required - just semantic HTML.</p>
+
+    <section class="demo-section">
+        <h2>Typography</h2>
+
+        <h1>Heading 1</h1>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
+        <h5>Heading 5</h5>
+        <h6>Heading 6</h6>
+
+        <p>This is a paragraph with some <strong>bold text</strong>, <em>italic text</em>, <small>small text</small>, and <mark>highlighted text</mark>.</p>
+
+        <p>Here's a <a href="#demo">link to somewhere</a> and some inline <code>code</code>.</p>
+
+        <blockquote>
+            This is a blockquote. It can contain multiple paragraphs and other elements.
+        </blockquote>
+
+        <p>Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to copy text.</p>
+
+        <pre><code>function hello() {
+    console.log("Hello, world!");
+    return true;
+}</code></pre>
+
+        <hr>
+    </section>
+
+    <section class="demo-section">
+        <h2>Lists</h2>
+
+        <h3>Unordered List</h3>
+        <ul>
+            <li>First item</li>
+            <li>Second item</li>
+            <li>Third item with nested list:
+                <ul>
+                    <li>Nested item 1</li>
+                    <li>Nested item 2</li>
+                </ul>
+            </li>
+            <li>Fourth item</li>
+        </ul>
+
+        <h3>Ordered List</h3>
+        <ol>
+            <li>First step</li>
+            <li>Second step</li>
+            <li>Third step with nested list:
+                <ol>
+                    <li>Sub-step A</li>
+                    <li>Sub-step B</li>
+                </ol>
+            </li>
+            <li>Final step</li>
+        </ol>
+
+        <h3>Description List</h3>
+        <dl>
+            <dt>HTML</dt>
+            <dd>HyperText Markup Language</dd>
+            <dt>CSS</dt>
+            <dd>Cascading Style Sheets</dd>
+            <dt>JavaScript</dt>
+            <dd>Programming language for web browsers</dd>
+        </dl>
+    </section>
+
+    <section class="demo-section">
+        <h2>Forms</h2>
+
+        <form>
+            <fieldset>
+                <legend>Personal Information</legend>
+
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" placeholder="Enter your full name">
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" placeholder="user@example.com">
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" placeholder="+1 (555) 123-4567">
+
+                <label for="age">Age:</label>
+                <input type="number" id="age" min="1" max="120" value="25">
+
+                <label for="birthdate">Birth Date:</label>
+                <input type="date" id="birthdate">
+            </fieldset>
+
+            <fieldset>
+                <legend>Preferences</legend>
+
+                <label for="country">Country:</label>
+                <select id="country">
+                    <option>Select a country</option>
+                    <option>United States</option>
+                    <option>Canada</option>
+                    <option>United Kingdom</option>
+                    <option>Australia</option>
+                    <option>Germany</option>
+                </select>
+
+                <label for="bio">Biography:</label>
+                <textarea id="bio" rows="4" placeholder="Tell us about yourself..."></textarea>
+
+                <label for="volume">Volume:</label>
+                <input type="range" id="volume" min="0" max="100" value="50">
+
+                <label>
+                    <input type="checkbox"> Subscribe to newsletter
+                </label>
+
+                <label>
+                    <input type="checkbox" checked> Enable notifications
+                </label>
+
+                <fieldset>
+                    <legend>Preferred Contact Method</legend>
+                    <label>
+                        <input type="radio" name="contact" value="email" checked> Email
+                    </label>
+                    <label>
+                        <input type="radio" name="contact" value="phone"> Phone
+                    </label>
+                    <label>
+                        <input type="radio" name="contact" value="mail"> Mail
+                    </label>
+                </fieldset>
+            </fieldset>
+
+            <button type="submit">Submit Form</button>
+            <button type="button">Cancel</button>
+            <button type="reset">Reset</button>
+        </form>
+    </section>
+
+    <section class="demo-section">
+        <h2>Tables</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Position</th>
+                    <th>Department</th>
+                    <th>Salary</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>John Doe</td>
+                    <td>Software Engineer</td>
+                    <td>Engineering</td>
+                    <td>$85,000</td>
+                </tr>
+                <tr>
+                    <td>Jane Smith</td>
+                    <td>Product Manager</td>
+                    <td>Product</td>
+                    <td>$95,000</td>
+                </tr>
+                <tr>
+                    <td>Bob Johnson</td>
+                    <td>Designer</td>
+                    <td>Design</td>
+                    <td>$75,000</td>
+                </tr>
+                <tr>
+                    <td>Alice Brown</td>
+                    <td>Data Scientist</td>
+                    <td>Analytics</td>
+                    <td>$90,000</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="demo-section">
+        <h2>Media</h2>
+
+        <figure>
+            <svg width="200" height="100" style="border: 1px solid var(--border-color);">
+                <rect width="200" height="100" fill="var(--code-bg)"/>
+                <text x="100" y="50" text-anchor="middle" dy="0.3em" fill="var(--text-color)">
+                    Sample SVG
+                </text>
+            </svg>
+            <figcaption>This is a sample SVG with a caption</figcaption>
+        </figure>
+    </section>
+
+    <section class="demo-section">
+        <h2>Interactive Elements</h2>
+
+        <details>
+            <summary>Click to expand details</summary>
+            <p>This content is hidden by default and revealed when the summary is clicked.</p>
+            <p>You can put any content here, including other HTML elements.</p>
+        </details>
+
+        <p>Here's a <a href="#top">link that goes to the top</a> of the page.</p>
+    </section>
+
+    <footer>
+        <hr>
+        <p class="text-center">
+            <small>&copy; 2024 System CSS Demo. This demonstrates a classless CSS framework.</small>
+        </p>
+    </footer>
+</body>
+</html>
