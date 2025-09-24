@@ -38,6 +38,19 @@
 
         <p>Here's a <a href="#demo">link to somewhere</a> and some inline <code>code</code>.</p>
 
+        <p>More text formatting examples:</p>
+        <ul>
+            <li><abbr title="HyperText Markup Language">HTML</abbr> is the standard markup language</li>
+            <li><cite>The Elements of Style</cite> is a famous writing guide</li>
+            <li><del>This text has been deleted</del> <ins>This text has been inserted</ins></li>
+            <li>E = mc<sup>2</sup> and H<sub>2</sub>O are famous formulas</li>
+            <li>The meeting is scheduled for <time datetime="2024-12-25T10:00">December 25th at 10:00 AM</time></li>
+            <li><q>This is an inline quote</q> from a famous author</li>
+            <li>The <dfn>definition term</dfn> is being defined here</li>
+            <li>Program output: <samp>Hello, World!</samp></li>
+            <li>The variable <var>x</var> represents an unknown value</li>
+        </ul>
+
         <blockquote>
             This is a blockquote. It can contain multiple paragraphs and other elements.
         </blockquote>
@@ -113,6 +126,21 @@
 
                 <label for="birthdate">Birth Date:</label>
                 <input type="date" id="birthdate">
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" placeholder="Enter password">
+
+                <label for="search">Search:</label>
+                <input type="search" id="search" placeholder="Search...">
+
+                <label for="url">Website URL:</label>
+                <input type="url" id="url" placeholder="https://example.com">
+
+                <label for="color">Favorite Color:</label>
+                <input type="color" id="color" value="#3498db">
+
+                <label for="file">Upload File:</label>
+                <input type="file" id="file">
             </fieldset>
 
             <fieldset>
@@ -121,18 +149,46 @@
                 <label for="country">Country:</label>
                 <select id="country">
                     <option>Select a country</option>
-                    <option>United States</option>
-                    <option>Canada</option>
-                    <option>United Kingdom</option>
-                    <option>Australia</option>
-                    <option>Germany</option>
+                    <optgroup label="North America">
+                        <option>United States</option>
+                        <option>Canada</option>
+                        <option>Mexico</option>
+                    </optgroup>
+                    <optgroup label="Europe">
+                        <option>United Kingdom</option>
+                        <option>Germany</option>
+                        <option>France</option>
+                    </optgroup>
+                    <optgroup label="Oceania">
+                        <option>Australia</option>
+                        <option>New Zealand</option>
+                    </optgroup>
                 </select>
+
+                <label for="browser">Browser (with datalist):</label>
+                <input type="text" id="browser" list="browsers" placeholder="Type or choose...">
+                <datalist id="browsers">
+                    <option value="Chrome">
+                    <option value="Firefox">
+                    <option value="Safari">
+                    <option value="Edge">
+                    <option value="Opera">
+                </datalist>
 
                 <label for="bio">Biography:</label>
                 <textarea id="bio" rows="4" placeholder="Tell us about yourself..."></textarea>
 
                 <label for="volume">Volume:</label>
                 <input type="range" id="volume" min="0" max="100" value="50">
+
+                <label for="progress">Task Progress:</label>
+                <progress id="progress" value="75" max="100">75%</progress>
+
+                <label for="disk-usage">Disk Usage:</label>
+                <meter id="disk-usage" value="0.6" min="0" max="1">60%</meter>
+
+                <label for="score">Test Score (0-100):</label>
+                <meter id="score" value="85" min="0" max="100" optimum="90" high="80" low="60">85 out of 100</meter>
 
                 <label>
                     <input type="checkbox"> Subscribe to newsletter
@@ -166,6 +222,13 @@
         <h2>Tables</h2>
 
         <table>
+            <caption>Employee Information Table</caption>
+            <colgroup>
+                <col style="width: 25%">
+                <col style="width: 30%">
+                <col style="width: 25%">
+                <col style="width: 20%">
+            </colgroup>
             <thead>
                 <tr>
                     <th>Name</th>
@@ -200,6 +263,16 @@
                     <td>$90,000</td>
                 </tr>
             </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3"><strong>Total Employees:</strong></td>
+                    <td><strong>4</strong></td>
+                </tr>
+                <tr>
+                    <td colspan="3"><strong>Average Salary:</strong></td>
+                    <td><strong>$86,250</strong></td>
+                </tr>
+            </tfoot>
         </table>
     </section>
 

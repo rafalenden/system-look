@@ -54,10 +54,6 @@ p {
   margin-bottom: var(--spacing-md);
 }
 
-pre {
-  font-size: var(--font-size-sm);
-}
-
 kbd {
   display: inline-block;
   padding: var(--spacing-xs) var(--spacing-sm);
