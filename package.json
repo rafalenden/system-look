@@ -1,7 +1,7 @@
 {
   "name": "system-styles",
   "version": "1.0.0",
-  "description": "A CSS library that provides reasonable defaults for native HTML elements without requiring classes",
+  "description": "A CSS library that provides reasonable defaults for system's native HTML elements without requiring classes",
   "main": "system.css",
   "files": [
     "system.css",
