@@ -23,6 +23,9 @@
     "system.css",
     "system.d.ts"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "semantic-release": "semantic-release"
   },
