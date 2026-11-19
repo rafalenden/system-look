@@ -15,11 +15,56 @@
             margin-bottom: 3rem;
             padding-bottom: 2rem;
         }
+        .demo-swatches {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+            gap: var(--system-spacing-sm);
+            padding: 0;
+            list-style: none;
+        }
+        .demo-swatches li {
+            display: flex;
+            align-items: center;
+            gap: var(--system-spacing-sm);
+            font-size: var(--system-font-size-sm);
+        }
+        .demo-swatches span {
+            flex: none;
+            width: 1.5rem;
+            height: 1.5rem;
+            border: 1px solid var(--system-border-color);
+            border-radius: var(--system-spacing-xs);
+        }
     </style>
 </head>
 <body>
     <h1>System Design Demo</h1>
     <p>This page demonstrates all HTML elements styled with System Design. No classes are required - just semantic HTML.</p>
+
+    <label>
+        <input type="checkbox" id="density-toggle">
+        Compact density (<code>data-system-density="compact"</code>)
+    </label>
+    <script>
+        document.getElementById('density-toggle').addEventListener('change', (event) => {
+            if (event.target.checked) document.documentElement.dataset.systemDensity = 'compact';
+            else delete document.documentElement.dataset.systemDensity;
+        });
+    </script>
+
+    <section class="demo-section">
+        <h2>Colors</h2>
+        <p>Semantic color tokens follow light and dark mode on their own.</p>
+        <ul class="demo-swatches">
+            <li><span style="background: var(--system-text-color)"></span> text-color</li>
+            <li><span style="background: var(--system-text-color-muted)"></span> text-color-muted</li>
+            <li><span style="background: var(--system-fill-color)"></span> fill-color</li>
+            <li><span style="background: var(--system-fill-color-hover)"></span> fill-color-hover</li>
+            <li><span style="background: var(--system-border-color)"></span> border-color</li>
+            <li><span style="background: var(--system-accent-color)"></span> accent-color</li>
+            <li><span style="background: var(--system-danger-color)"></span> danger-color</li>
+        </ul>
+    </section>
 
     <section class="demo-section">
         <h2>Typography</h2>

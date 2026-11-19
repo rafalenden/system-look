@@ -19,11 +19,55 @@
   --system-font-size-3xl: 2rem;
   --system-font-size-4xl: 2.5rem;
 
+  --system-line-height: 1.5;
   --system-control-height: 2.1875rem;
+  --system-label-font-weight: 500;
 
+  /* Colors are derived from the browser's own system colors, so they follow
+     light and dark mode (and forced colors) without a media query. */
+  --system-text-color: CanvasText;
+  --system-text-color-muted: color-mix(in srgb, CanvasText 60%, transparent);
+  --system-background-color: transparent;
+  --system-fill-color: color-mix(in srgb, CanvasText 6%, transparent);
+  --system-fill-color-hover: color-mix(in srgb, CanvasText 12%, transparent);
   --system-border-color: color-mix(in srgb, CanvasText 10%, transparent);
+  --system-accent-color: light-dark(#0075ff, #99c8ff);
+  --system-danger-color: light-dark(#c93030, #ff6b6b);
 
   color-scheme: light dark;
+}
+
+/* Use the platform's accent color where the browser exposes it. The token is
+   for your own rules; native controls keep the browser's own accent unless
+   you set `accent-color` yourself. */
+@supports (color: AccentColor) {
+  :root {
+    --system-accent-color: AccentColor;
+  }
+}
+
+/* Compact density: a UI-sized type scale and tighter spacing for small
+   surfaces such as extension popups, side panels and settings windows.
+   Opt in with <html data-system-density="compact">. */
+:root:where([data-system-density="compact"]) {
+  --system-spacing-md: 0.75rem;
+  --system-spacing-lg: 1rem;
+  --system-spacing-xl: 1.5rem;
+  --system-spacing-2xl: 2rem;
+  --system-spacing-3xl: 2.5rem;
+
+  --system-font-size-xs: 0.6875rem;
+  --system-font-size-sm: 0.75rem;
+  --system-font-size-base: 0.8125rem;
+  --system-font-size-lg: 0.875rem;
+  --system-font-size-xl: 0.875rem;
+  --system-font-size-2xl: 0.9375rem;
+  --system-font-size-3xl: 1rem;
+  --system-font-size-4xl: 1.125rem;
+
+  --system-line-height: 1.4;
+  --system-control-height: 1.75rem;
+  --system-label-font-weight: 400;
 }
 
 *, *::before, *::after {
@@ -36,7 +80,9 @@ html {
 
 body {
   font-size: var(--system-font-size-base);
-  line-height: 1.5;
+  color: var(--system-text-color);
+  background-color: var(--system-background-color);
+  line-height: var(--system-line-height);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -61,9 +107,12 @@ p {
 kbd {
   display: inline-block;
   padding: var(--system-spacing-xs) var(--system-spacing-sm);
-  font-size: var(--system-font-size-xs);
+  font-size: var(--system-font-size-sm);
+  /* Stay regular inside bold parents such as `dt` and `th`. */
+  font-weight: 400;
   border-radius: var(--system-spacing-xs);
   font-family: var(--system-ui-mono);
+  background-color: var(--system-fill-color);
   border: 1px solid var(--system-border-color);
   box-shadow: 0 1px 2px var(--system-border-color);
 }
@@ -72,6 +121,7 @@ blockquote {
   margin: 0 0 var(--system-spacing-md);
   padding: var(--system-spacing-sm) var(--system-spacing-md);
   font-style: italic;
+  color: var(--system-text-color-muted);
 }
 
 hr {
@@ -110,6 +160,13 @@ input:where([type="checkbox"], [type="radio"]) {
   vertical-align: middle;
 }
 
+/* A slider is not a text box: it keeps the full width but not the control
+   height and padding, so it does not stretch the row it sits in. */
+input:where([type="range"]) {
+  min-height: 0;
+  padding: 0;
+}
+
 button {
   cursor: pointer;
   padding: calc(var(--system-spacing-xs) * 1.5) calc(var(--system-spacing-sm) * 1.5);
@@ -142,7 +199,12 @@ legend + * {
 label {
   display: inline-block;
   margin-bottom: var(--system-spacing-sm);
-  font-weight: 500;
+  font-weight: var(--system-label-font-weight);
+}
+
+/* A label wrapping a checkbox or radio is an option, not a field caption. */
+label:where(:has(> input:where([type="checkbox"], [type="radio"]))) {
+  font-weight: 400;
 }
 
 ul, ol {
@@ -205,6 +267,7 @@ progress, meter {
 caption {
   padding: var(--system-spacing-sm) 0;
   text-align: left;
+  color: var(--system-text-color-muted);
 }
 
 tfoot td, tfoot th {

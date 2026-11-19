@@ -112,10 +112,62 @@ Everything is driven by custom properties declared on `:root`. Override the ones
 | `--system-ui-mono` | `'SF Mono'`, then common monospace fonts | `kbd`, `samp`, `var` |
 | `--system-spacing-xs` … `--system-spacing-3xl` | `0.25rem` … `3rem` | Margins and padding |
 | `--system-font-size-xs` … `--system-font-size-4xl` | `0.75rem` … `2.5rem` | Text and heading sizes |
+| `--system-line-height` | `1.5` | Body line height |
 | `--system-control-height` | `2.1875rem` | Minimum height of buttons, inputs, selects and textareas |
-| `--system-border-color` | `CanvasText` at 10% opacity | `kbd`, `hr` and `tfoot` borders |
+| `--system-label-font-weight` | `500` | Weight of `label` text; labels wrapping a checkbox or radio are always regular |
 
-Sizes are in `rem`, so changing the root font size scales the whole stylesheet. That is handy for compact interfaces such as browser extension popups:
+### Colors
+
+Color tokens are built from the browser's system colors, so they switch with light and dark mode without a media query. Use them in your own rules to stay in step with the rest of the page:
+
+| Property | Default | Used for |
+| --- | --- | --- |
+| `--system-text-color` | `CanvasText` | Body text |
+| `--system-text-color-muted` | `CanvasText` at 60% opacity | `blockquote`, `caption`; secondary text in your own rules |
+| `--system-background-color` | `transparent` | Page background |
+| `--system-fill-color` | `CanvasText` at 6% opacity | `kbd` background; subtle surfaces |
+| `--system-fill-color-hover` | `CanvasText` at 12% opacity | Not used by the library; hover state for your own controls |
+| `--system-border-color` | `CanvasText` at 10% opacity | `kbd`, `hr` and `tfoot` borders |
+| `--system-accent-color` | `AccentColor` where supported, otherwise a light/dark blue | Not used by the library; highlights in your own rules |
+| `--system-danger-color` | `#c93030` light, `#ff6b6b` dark | Not used by the library; errors and destructive or active states |
+
+```css
+.mute-button:hover {
+  background: var(--system-fill-color-hover);
+}
+
+.mute-button[aria-pressed='true'] {
+  color: var(--system-danger-color);
+}
+```
+
+When you override a color and want different light and dark values, use [`light-dark()`](https://developer.mozilla.org/docs/Web/CSS/color_value/light-dark):
+
+```css
+:root {
+  --system-accent-color: light-dark(#1da0c3, #4cc3e0);
+}
+```
+
+Checkboxes, radios, range inputs and progress bars keep the browser's own accent. To tint them with your color as well, set `accent-color`:
+
+```css
+:root {
+  accent-color: var(--system-accent-color);
+}
+```
+
+### Compact density
+
+The default scale suits documents. For small interfaces such as browser extension popups, side panels and settings windows, opt in to the compact preset:
+
+```html
+<html data-system-density="compact">
+```
+
+It sets a 13px base font with headings from 13px to 18px, tighter spacing and line height, 28px controls and regular-weight labels. Individual tokens can still be overridden on top of it.
+
+Sizes are in `rem`, so changing the root font size scales the whole stylesheet, with or without the preset:
 
 ```css
 :root {
