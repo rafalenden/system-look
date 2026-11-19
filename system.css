@@ -62,7 +62,8 @@ kbd {
   font-size: var(--font-size-xs);
   border-radius: var(--spacing-xs);
   font-family: var(--system-ui-mono);
-  box-shadow:  0 1px 2px var(--border-color);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 1px 2px var(--border-color);
 }
 
 blockquote {
@@ -99,6 +100,7 @@ input[type="file"]:not(:disabled):not([readonly]) {
 input[type="checkbox"], input[type="radio"] {
   display: inline-block;
   width: auto;
+  min-height: 0;
   padding: 0;
   margin: 0;
   vertical-align: middle;
@@ -109,21 +111,9 @@ button {
   padding: calc(var(--spacing-xs) * 1.5) calc(var(--spacing-sm) * 1.5);
 }
 
-button:hover {
-}
-
-button:focus {
-  outline: 0;
-}
-
-button[type="submit"] {
-}
-
-button[type="submit"]:hover:not(:disabled) {
-}
-
 fieldset {
   min-width: 0;
+  margin-inline: 0;
   padding: 0;
   border: none;
 }
@@ -137,6 +127,12 @@ legend {
   font-weight: 600;
   line-height: inherit;
   white-space: normal;
+}
+
+/* The legend is floated so it can be styled like a heading; keep whatever
+   follows it below instead of beside it. */
+legend + * {
+  clear: left;
 }
 
 label {
@@ -185,7 +181,7 @@ th, td {
 }
 
 summary {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 abbr {
