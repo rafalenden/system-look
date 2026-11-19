@@ -2,26 +2,26 @@
   --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --system-ui-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
 
-  --spacing-xs: 0.25rem;
-  --spacing-sm: 0.5rem;
-  --spacing-md: 1rem;
-  --spacing-lg: 1.5rem;
-  --spacing-xl: 2rem;
-  --spacing-2xl: 2.5rem;
-  --spacing-3xl: 3rem;
+  --system-spacing-xs: 0.25rem;
+  --system-spacing-sm: 0.5rem;
+  --system-spacing-md: 1rem;
+  --system-spacing-lg: 1.5rem;
+  --system-spacing-xl: 2rem;
+  --system-spacing-2xl: 2.5rem;
+  --system-spacing-3xl: 3rem;
 
-  --font-size-xs: 0.75rem;
-  --font-size-sm: 0.875rem;
-  --font-size-base: 1rem;
-  --font-size-lg: 1.25rem;
-  --font-size-xl: 1.5rem;
-  --font-size-2xl: 1.75rem;
-  --font-size-3xl: 2rem;
-  --font-size-4xl: 2.5rem;
+  --system-font-size-xs: 0.75rem;
+  --system-font-size-sm: 0.875rem;
+  --system-font-size-base: 1rem;
+  --system-font-size-lg: 1.25rem;
+  --system-font-size-xl: 1.5rem;
+  --system-font-size-2xl: 1.75rem;
+  --system-font-size-3xl: 2rem;
+  --system-font-size-4xl: 2.5rem;
 
-  --control-height: 2.1875rem;
+  --system-control-height: 2.1875rem;
 
-  --border-color: color-mix(in srgb, CanvasText 10%, transparent);
+  --system-border-color: color-mix(in srgb, CanvasText 10%, transparent);
 
   color-scheme: light dark;
 }
@@ -35,47 +35,47 @@ html {
 }
 
 body {
-  font-size: var(--font-size-base);
+  font-size: var(--system-font-size-base);
   line-height: 1.5;
 }
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
-  margin-bottom: var(--spacing-sm);
+  margin-bottom: var(--system-spacing-sm);
   font-weight: 600;
   line-height: 1.2;
 }
 
-h1 { font-size: var(--font-size-4xl); }
-h2 { font-size: var(--font-size-3xl); }
-h3 { font-size: var(--font-size-2xl); }
-h4 { font-size: var(--font-size-xl); }
-h5 { font-size: var(--font-size-lg); }
-h6 { font-size: var(--font-size-base); }
+h1 { font-size: var(--system-font-size-4xl); }
+h2 { font-size: var(--system-font-size-3xl); }
+h3 { font-size: var(--system-font-size-2xl); }
+h4 { font-size: var(--system-font-size-xl); }
+h5 { font-size: var(--system-font-size-lg); }
+h6 { font-size: var(--system-font-size-base); }
 
 p {
   margin-top: 0;
-  margin-bottom: var(--spacing-md);
+  margin-bottom: var(--system-spacing-md);
 }
 
 kbd {
   display: inline-block;
-  padding: var(--spacing-xs) var(--spacing-sm);
-  font-size: var(--font-size-xs);
-  border-radius: var(--spacing-xs);
+  padding: var(--system-spacing-xs) var(--system-spacing-sm);
+  font-size: var(--system-font-size-xs);
+  border-radius: var(--system-spacing-xs);
   font-family: var(--system-ui-mono);
-  border: 1px solid var(--border-color);
-  box-shadow: 0 1px 2px var(--border-color);
+  border: 1px solid var(--system-border-color);
+  box-shadow: 0 1px 2px var(--system-border-color);
 }
 
 blockquote {
-  margin: 0 0 var(--spacing-md);
-  padding: var(--spacing-sm) var(--spacing-md);
+  margin: 0 0 var(--system-spacing-md);
+  padding: var(--system-spacing-sm) var(--system-spacing-md);
   font-style: italic;
 }
 
 hr {
-  color: var(--border-color);
+  color: var(--system-border-color);
 }
 
 input, button, select, textarea {
@@ -84,15 +84,15 @@ input, button, select, textarea {
 }
 
 button, input, select, textarea {
-  margin: 0 0 var(--spacing-sm) 0;
-  min-height: var(--control-height);
+  margin: 0 0 var(--system-spacing-sm) 0;
+  min-height: var(--system-control-height);
   padding: 3px;
 }
 
 input, textarea, select {
   display: block;
   width: 100%;
-  font-size: var(--font-size-base);
+  font-size: var(--system-font-size-base);
 }
 
 /* `:where()` keeps these rules at the specificity of a plain `input`
@@ -112,7 +112,7 @@ input:where([type="checkbox"], [type="radio"]) {
 
 button {
   cursor: pointer;
-  padding: calc(var(--spacing-xs) * 1.5) calc(var(--spacing-sm) * 1.5);
+  padding: calc(var(--system-spacing-xs) * 1.5) calc(var(--system-spacing-sm) * 1.5);
 }
 
 fieldset {
@@ -126,8 +126,8 @@ legend {
   float: left;
   width: 100%;
   padding: 0;
-  margin-bottom: var(--spacing-sm);
-  font-size: var(--font-size-lg);
+  margin-bottom: var(--system-spacing-sm);
+  font-size: var(--system-font-size-lg);
   font-weight: 600;
   line-height: inherit;
   white-space: normal;
@@ -141,14 +141,14 @@ legend + * {
 
 label {
   display: inline-block;
-  margin-bottom: var(--spacing-sm);
+  margin-bottom: var(--system-spacing-sm);
   font-weight: 500;
 }
 
 ul, ol {
   margin-top: 0;
-  margin-bottom: var(--spacing-md);
-  padding-left: var(--spacing-xl);
+  margin-bottom: var(--system-spacing-md);
+  padding-left: var(--system-spacing-xl);
 }
 
 ul ul, ul ol, ol ul, ol ol {
@@ -156,12 +156,12 @@ ul ul, ul ol, ol ul, ol ol {
 }
 
 li {
-  margin-bottom: var(--spacing-xs);
+  margin-bottom: var(--system-spacing-xs);
 }
 
 dl {
   margin-top: 0;
-  margin-bottom: var(--spacing-md);
+  margin-bottom: var(--system-spacing-md);
 }
 
 dt {
@@ -169,18 +169,18 @@ dt {
 }
 
 dd {
-  margin-bottom: var(--spacing-sm);
+  margin-bottom: var(--system-spacing-sm);
   margin-left: 0;
 }
 
 table {
   width: 100%;
-  margin-bottom: var(--spacing-md);
+  margin-bottom: var(--system-spacing-md);
   border-collapse: collapse;
 }
 
 th, td {
-  padding: var(--spacing-xs) var(--spacing-xs) var(--spacing-xs) 0;
+  padding: var(--system-spacing-xs) var(--system-spacing-xs) var(--system-spacing-xs) 0;
   text-align: left;
 }
 
@@ -203,10 +203,10 @@ progress, meter {
 }
 
 caption {
-  padding: var(--spacing-sm) 0;
+  padding: var(--system-spacing-sm) 0;
   text-align: left;
 }
 
 tfoot td, tfoot th {
-  border-top: 1px solid var(--border-color);
+  border-top: 1px solid var(--system-border-color);
 }
