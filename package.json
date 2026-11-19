@@ -1,5 +1,5 @@
 {
-  "name": "system-styles",
+  "name": "system-design",
   "version": "0.0.0-development",
   "description": "A CSS library that provides reasonable defaults for system's native HTML elements without requiring classes",
   "main": "system.css",
@@ -41,12 +41,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rafalenden/system-styles.git"
+    "url": "git+https://github.com/rafalenden/system-design.git"
   },
   "bugs": {
-    "url": "https://github.com/rafalenden/system-styles/issues"
+    "url": "https://github.com/rafalenden/system-design/issues"
   },
-  "homepage": "https://github.com/rafalenden/system-styles#readme",
+  "homepage": "https://github.com/rafalenden/system-design#readme",
   "devDependencies": {
     "@semantic-release/commit-analyzer": "^13.0.1",
     "@semantic-release/npm": "^12.0.2",

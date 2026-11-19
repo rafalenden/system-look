@@ -1,44 +1,44 @@
-# System Styles
+# System Design
 
 A lightweight CSS library that provides beautiful defaults for native HTML elements without requiring any classes. Just include the CSS file and your semantic HTML will look great out of the box.
 
 ![Screenshot](./demo/screenshot.png)
 
-[View the live demo](https://rafalenden.github.io/system-styles/demo/)
+[View the live demo](https://rafalenden.github.io/system-design/demo/)
 
 ## Installation
 
 ### npm
 
 ```bash
-npm install system-styles
+npm install system-design
 ```
 
 With a bundler (Vite, webpack, Parcel, esbuild…), import it once from your entry file:
 
 ```js
-import 'system-styles';
+import 'system-design';
 ```
 
 or from your own stylesheet:
 
 ```css
-@import 'system-styles';
+@import 'system-design';
 ```
 
 Without a bundler, link the file directly:
 
 ```html
-<link rel="stylesheet" href="node_modules/system-styles/system.css">
+<link rel="stylesheet" href="node_modules/system-design/system.css">
 ```
 
 ### CDN
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/system-styles/system.css">
+<link rel="stylesheet" href="https://unpkg.com/system-design/system.css">
 ```
 
-Pin a version (`system-styles@1/system.css`) in production so a new release can't change your page.
+Pin a version (`system-design@1/system.css`) in production so a new release can't change your page.
 
 ### Download
 
@@ -92,7 +92,7 @@ Just write semantic HTML and it will be styled automatically:
 
 ## Dark Mode
 
-System Styles automatically adapts to your system's dark/light mode preference using `prefers-color-scheme`. No configuration needed!
+System Design automatically adapts to your system's dark/light mode preference using `prefers-color-scheme`. No configuration needed!
 
 ## Customization
 
@@ -137,12 +137,12 @@ Rules only use element selectors (attribute and state checks are wrapped in `:wh
 If you would rather not think about source order at all, load the library into a [cascade layer](https://developer.mozilla.org/docs/Web/CSS/@layer); unlayered styles then take precedence over it:
 
 ```css
-@import 'system-styles' layer(system);
+@import 'system-design' layer(system);
 ```
 
 ## Demo
 
-The demo is a single static page with no dependencies. Open `demo/index.html` in a browser, or view it [online](https://rafalenden.github.io/system-styles/demo/).
+The demo is a single static page with no dependencies. Open `demo/index.html` in a browser, or view it [online](https://rafalenden.github.io/system-design/demo/).
 
 ## License
 
