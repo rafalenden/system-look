@@ -44,12 +44,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rafalenden/system-design.git"
+    "url": "git+https://github.com/rafalenden/system-look.git"
   },
   "bugs": {
-    "url": "https://github.com/rafalenden/system-design/issues"
+    "url": "https://github.com/rafalenden/system-look/issues"
   },
-  "homepage": "https://github.com/rafalenden/system-design#readme",
+  "homepage": "https://github.com/rafalenden/system-look#readme",
   "devDependencies": {
     "@semantic-release/commit-analyzer": "^13.0.1",
     "@semantic-release/npm": "^12.0.2",

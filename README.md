@@ -1,10 +1,10 @@
-# System Design
+# System Look
 
 A lightweight CSS library that provides beautiful defaults for native HTML elements without requiring any classes. Just include the CSS file and your semantic HTML will look great out of the box.
 
 ![Screenshot](./demo/screenshot.png)
 
-[View the live demo](https://rafalenden.github.io/system-design/demo/)
+[View the live demo](https://rafalenden.github.io/system-look/demo/)
 
 ## Installation
 
@@ -92,7 +92,7 @@ Just write semantic HTML and it will be styled automatically:
 
 ## Dark Mode
 
-System Design automatically adapts to your system's dark/light mode preference using `prefers-color-scheme`. No configuration needed!
+System Look automatically adapts to your system's dark/light mode preference using `prefers-color-scheme`. No configuration needed!
 
 ## Customization
 
@@ -194,7 +194,7 @@ If you would rather not think about source order at all, load the library into a
 
 ## Demo
 
-The demo is a single static page with no dependencies. Open `demo/index.html` in a browser, or view it [online](https://rafalenden.github.io/system-design/demo/).
+The demo is a single static page with no dependencies. Open `demo/index.html` in a browser, or view it [online](https://rafalenden.github.io/system-look/demo/).
 
 ## License
 
