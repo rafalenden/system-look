@@ -11,34 +11,34 @@ A lightweight CSS library that provides beautiful defaults for native HTML eleme
 ### npm
 
 ```bash
-npm install system-styles
+npm install system-look
 ```
 
 With a bundler (Vite, webpack, Parcel, esbuild…), import it once from your entry file:
 
 ```js
-import 'system-styles';
+import 'system-look';
 ```
 
 or from your own stylesheet:
 
 ```css
-@import 'system-styles';
+@import 'system-look';
 ```
 
 Without a bundler, link the file directly:
 
 ```html
-<link rel="stylesheet" href="node_modules/system-styles/system.css">
+<link rel="stylesheet" href="node_modules/system-look/system.css">
 ```
 
 ### CDN
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/system-styles/system.css">
+<link rel="stylesheet" href="https://unpkg.com/system-look/system.css">
 ```
 
-Pin a version (`system-styles@1/system.css`) in production so a new release can't change your page.
+Pin a version (`system-look@1/system.css`) in production so a new release can't change your page.
 
 ### Download
 
@@ -189,7 +189,7 @@ Rules only use element selectors (attribute and state checks are wrapped in `:wh
 If you would rather not think about source order at all, load the library into a [cascade layer](https://developer.mozilla.org/docs/Web/CSS/@layer); unlayered styles then take precedence over it:
 
 ```css
-@import 'system-styles' layer(system);
+@import 'system-look' layer(system);
 ```
 
 ## Demo
