@@ -19,6 +19,8 @@
   --font-size-3xl: 2rem;
   --font-size-4xl: 2.5rem;
 
+  --control-height: 2.1875rem;
+
   --border-color: color-mix(in srgb, CanvasText 10%, transparent);
 
   color-scheme: light dark;
@@ -83,7 +85,7 @@ input, button, select, textarea {
 
 button, input, select, textarea {
   margin: 0 0 var(--spacing-sm) 0;
-  min-height: 35px;
+  min-height: var(--control-height);
   padding: 3px;
 }
 
@@ -93,11 +95,13 @@ input, textarea, select {
   font-size: var(--font-size-base);
 }
 
-input[type="file"]:not(:disabled):not([readonly]) {
+/* `:where()` keeps these rules at the specificity of a plain `input`
+   selector, so one class (or a later `input` rule) is enough to override them. */
+input:where([type="file"]):where(:not(:disabled, [readonly])) {
   cursor: pointer;
 }
 
-input[type="checkbox"], input[type="radio"] {
+input:where([type="checkbox"], [type="radio"]) {
   display: inline-block;
   width: auto;
   min-height: 0;
