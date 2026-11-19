@@ -1,4 +1,4 @@
-# System Look
+# Get the System Look!
 
 A lightweight CSS library that provides beautiful defaults for native HTML elements without requiring any classes. Just include the CSS file and your semantic HTML will look great out of the box.
 
