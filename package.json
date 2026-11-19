@@ -3,9 +3,25 @@
   "version": "0.0.0-development",
   "description": "A CSS library that provides reasonable defaults for system's native HTML elements without requiring classes",
   "main": "system.css",
+  "types": "system.d.ts",
+  "style": "system.css",
+  "unpkg": "system.css",
+  "jsdelivr": "system.css",
+  "exports": {
+    ".": {
+      "types": "./system.d.ts",
+      "style": "./system.css",
+      "default": "./system.css"
+    },
+    "./system.css": "./system.css",
+    "./package.json": "./package.json"
+  },
+  "sideEffects": [
+    "*.css"
+  ],
   "files": [
     "system.css",
-    "README.md"
+    "system.d.ts"
   ],
   "scripts": {
     "semantic-release": "semantic-release"
@@ -25,7 +41,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/rafalenden/system-styles.git"
+    "url": "git+https://github.com/rafalenden/system-styles.git"
   },
   "bugs": {
     "url": "https://github.com/rafalenden/system-styles/issues"
