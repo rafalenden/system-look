@@ -25,20 +25,14 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/rafenden/system-styles.git"
+    "url": "https://github.com/rafalenden/system-styles.git"
   },
   "bugs": {
-    "url": "https://github.com/rafenden/system-styles/issues"
+    "url": "https://github.com/rafalenden/system-styles/issues"
   },
-  "homepage": "https://github.com/rafenden/system-styles#readme",
-  "release": {
-    "branches": [
-      "main"
-    ]
-  },
+  "homepage": "https://github.com/rafalenden/system-styles#readme",
   "devDependencies": {
     "@semantic-release/commit-analyzer": "^13.0.1",
-    "@semantic-release/git": "^10.0.1",
     "@semantic-release/npm": "^12.0.2",
     "@semantic-release/release-notes-generator": "^14.1.0",
     "semantic-release": "^24.2.9"
