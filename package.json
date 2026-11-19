@@ -1,5 +1,5 @@
 {
-  "name": "system-design",
+  "name": "system-styles",
   "version": "0.0.0-development",
   "description": "A CSS library that provides reasonable defaults for system's native HTML elements without requiring classes",
   "main": "system.css",
