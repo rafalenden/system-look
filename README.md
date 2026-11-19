@@ -2,6 +2,10 @@
 
 A lightweight CSS library that provides beautiful defaults for native HTML elements without requiring any classes. Just include the CSS file and your semantic HTML will look great out of the box.
 
+![Screenshot](./demo/screenshot.png)
+
+[View the live demo](https://rafalenden.github.io/system-styles/demo/)
+
 ## Installation
 
 ### CDN
@@ -88,6 +92,10 @@ You can customize System Styles by overriding CSS custom properties:
   /* ... and many more */
 }
 ```
+
+## Demo
+
+The demo is a single static page with no dependencies. Open `demo/index.html` in a browser, or view it [online](https://rafalenden.github.io/system-styles/demo/).
 
 ## License
 
